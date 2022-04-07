@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin-Thêm sản phẩm</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header style="background-color: rgb(107, 209, 216); box-shadow: 3px 4px rgba(0, 0, 0, .1);">
+        <div class="container" style="padding-top: 8px;padding-bottom: 8px;">
+			<h2 class="text-start text-light">Thông tin sản phẩm</h2>
+      </header>
+      <main class="container">
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-body">
+				<form method="post">
+					<div class="form-group">
+					  <label for="usr">Mã sản phẩm:</label>
+					  <input type="number" name="id" value="<?=$id?>" style="display: none;">
+					  <input required="true" type="text" class="form-control" id="usr" name="fullname" >
+					</div>
+					<div class="form-group">
+					  <label for="text">Tên sản phẩm:</label>
+					  <input type="text" class="form-control" id="text" name="text" >
+					</div>
+					<div class="form-group">
+					  <label for="address">Xuất xứ:</label>
+					  <input type="text" class="form-control" id="address" name="address">
+					</div>
+                    <div class="form-group">
+                        <label for="address">Chất liệu:</label>
+                        <input type="text" class="form-control" id="address" name="address">
+                      </div>
+                      <div class="form-group">
+                        <label for="price">Giá thành:</label>
+                        <input type="number" class="form-control" id="price" name="price">
+                      </div>
+					<button class="btn btn-success" onclick="luu()">Lưu</button>
+				</form>
+			</div>
+		</div>
+	</div>
+    <script language="javascript">
+        var button = document.getElementById("Dathang");
+        function luu(){
+        if(confirm("Vui lòng xác nhận lưu thông tin") == true){
+            alert('Lưu thông tin thành công')
+            window.location = "host.html";
+        }}
+    </script>
+</body>
+</html>
